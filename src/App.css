@@ -5,36 +5,23 @@ img {
   width: 100%;
 }
 .app-wrapper {
-  display: grid;
-  width: 1200px;
-  margin: 0 auto;
-  grid-template-areas:
-  "header header header"
-  "nav content content";
-   grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
+	display: grid;
+	width: 1200px;
+	margin: 0 auto;
+	grid-template-areas:
+	"header header header"
+	"nav content content";
+	grid-template-rows: 60px 1fr;
+	grid-template-columns: 2fr 10fr;
+		/* grid-gap: 10px; */
 }
-.header {
-  align-items: center;
-  grid-area: header;
-  background-color: green;
+.app-wrapper-content {
+	grid-area: content;
+	background-color: #2521f3;
+	color: #fff;
 }
-.img {
-  background-image: url(img.png);
-  background-size: cover;
-  height: 50px;
-  width: 50px;
-  max-width: 100%;
-}
-.nav {
-  grid-area: nav;
-  background-color: #14d114;
-}
-.content {
-  grid-area: content;
-  background-color: #1714d1;
-}
+
+
 
 
 
