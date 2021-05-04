@@ -6,7 +6,7 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-
+// let SomeComponent = () => <Dialogs />
 //объявляем переменную и присваиваем ей стрелочную функцию
 const App = (props) => {
 	return (
@@ -15,8 +15,14 @@ const App = (props) => {
 				<Header />
 				<Navbar />
 				<div className='app-wrapper-content'>
-					<Route exact path='/dialogs' component={Dialogs} />
-					<Route path='/profile' component={Profile} />
+					{/* <Route exact path='/dialogs' component={Dialogs} />
+					<Route path='/profile' component={Profile} /> */}
+					{/* или  */}
+					<Route path='/dialogs' render={ () => <Dialogs /> } />
+					<Route path='/profile' render={ () => <Profile /> } />
+					{/* или  */}
+					{/* <Route path='/dialogs' render={ SomeComponent } />
+					<Route path='/profile' render={ () => <Profile /> } /> */}
 				</div>
 			</div>
 		</BrowserRouter>
