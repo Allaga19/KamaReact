@@ -15,18 +15,21 @@ const App = (props) => {
 				<Header />
 				<Navbar />
 				<div className='app-wrapper-content'>
-					{/* <Route exact path='/dialogs' component={Dialogs} />
-					<Route path='/profile' component={Profile} /> */}
-					{/* или  */}
-					<Route path='/dialogs' render={ () => <Dialogs /> } />
-					<Route path='/profile' render={ () => <Profile /> } />
-					{/* или  */}
-					{/* <Route path='/dialogs' render={ SomeComponent } />
-					<Route path='/profile' render={ () => <Profile /> } /> */}
+					<Route path='/dialogs' 
+						render={ () => <Dialogs state={props.state.dialogsPage} /> } />
+							
+							{/* // dialogs={props.state.dialogsPage.dialogs} 
+							// messages={props.state.dialogsPage.messages}  */}
+						
+					<Route path='/profile' 
+						render={ () => <Profile state={props.state.profilePage} /> } />
+							
+							{/* // posts={props.state.profilePage.posts}  */}
+						
 				</div>
 			</div>
 		</BrowserRouter>
-	);
+	); 
 }
 
 
